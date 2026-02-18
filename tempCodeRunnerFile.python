@@ -1,0 +1,40 @@
+# Create a directed graph for the class diagram
+client_admin_diagram = Digraph('Class Diagram', format='png')
+client_admin_diagram.attr(rankdir='TB', size='8')
+
+# Admin class
+client_admin_diagram.node('Admin', '''\
+<<table border="0" cellborder="1" cellspacing="0">
+<tr><td bgcolor="lightblue"><b>Admin</b></td></tr>
+<tr><td>- adminId: int</td></tr>
+<tr><td>- name: string</td></tr>
+<tr><td>- email: string</td></tr>
+<tr><td>- password: string</td></tr>
+<tr><td><i>+ addProduct(): void</i></td></tr>
+<tr><td><i>+ manageProducts(): void</i></td></tr>
+<tr><td><i>+ manageCustomers(): void</i></td></tr>
+<tr><td><i>+ manageOrders(): void</i></td></tr>
+<tr><td><i>+ insertCategory(): void</i></td></tr>
+</table>>''', shape='plaintext')
+
+# Client class
+client_admin_diagram.node('Client', '''\
+<<table border="0" cellborder="1" cellspacing="0">
+<tr><td bgcolor="lightblue"><b>Client</b></td></tr>
+<tr><td>- clientId: int</td></tr>
+<tr><td>- name: string</td></tr>
+<tr><td>- email: string</td></tr>
+<tr><td>- password: string</td></tr>
+<tr><td><i>+ login(): bool</i></td></tr>
+<tr><td><i>+ searchProducts(): List</i></td></tr>
+<tr><td><i>+ viewProduct(): void</i></td></tr>
+<tr><td><i>+ addToCart(): void</i></td></tr>
+<tr><td><i>+ addToWishlist(): void</i></td></tr>
+<tr><td><i>+ checkout(): void</i></td></tr>
+</table>>''', shape='plaintext')
+
+# Define relationships
+client_admin_diagram.edge('Admin', 'Client', label='manages', arrowhead='vee')
+
+# Render the diagram
+client_admin_diagram.render('/mnt/data/class_diagram_client_admin', view=True)

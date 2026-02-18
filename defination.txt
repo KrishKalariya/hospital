@@ -1,0 +1,13 @@
+database tables: 
+1. appointment: uid (primary key)name, email, mobile no, problem
+2. login: username, password
+3. doctor:  
+4. nurse: 
+5. patient:
+
+panels management :
+1. appointment to login
+2. login to doctor,nurse,patient
+3. doctor to doctor admin panel: nav: manage nurses, manage patient, change password, profile, logout
+4. nurse to nurse admin panel: nav: manage patient, change password, profile, logout
+5. patient to patient admin panel: nav: change password, profile, logout

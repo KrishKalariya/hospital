@@ -1,0 +1,15 @@
+*{
+    font-size: medium;
+    text-align: center;
+}
+table{
+    width: 100%;
+    position: fixed;
+}
+table,th,td{
+    border: 1px,solid;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
