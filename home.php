@@ -26,7 +26,7 @@
            <div class="row min-vh-100 align-items-center">
                <div class="content">
                    <h3>
-                       let us brighten your smile
+                       Hello from krish kalariya
                    </h3>
                    <p>Your great smile beigns with a great dentist</p>
                </div>
